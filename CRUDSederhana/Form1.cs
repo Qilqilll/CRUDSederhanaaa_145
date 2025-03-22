@@ -50,3 +50,15 @@ namespace CRUDSederhana
 
                     dgvMahasiswa.AutoGenerateColumns = true;
                     dgvMahasiswa.DataSource = dt;
+
+                    // Tambahkan ini untuk debugging
+                    MessageBox.Show($"Jumlah Data: {dt.Rows.Count}", "Debugging Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ClearForm();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }

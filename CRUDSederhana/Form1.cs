@@ -13,3 +13,5 @@ namespace CRUDSederhana
 {
     public partial class Form1 : Form
     {
+        // Ganti "SERVER" sesuai dengan SQL Server Anda
+        private string connectionString = "Data Source=LAPTOP-3HJQCS6H\\AQIL;Initial Catalog=OrganisasiMahasiswa;Integrated Security=True";

@@ -148,3 +148,9 @@ namespace CRUDSederhana
                 MessageBox.Show("Pilih data yang akan dihapus!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            LoadData();
+            MessageBox.Show($"Jumlah Kolom: {dgvMahasiswa.ColumnCount}\nJumlah Baris: {dgvMahasiswa.RowCount}",
+                "Lagi Loading Leee DataGridView", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }

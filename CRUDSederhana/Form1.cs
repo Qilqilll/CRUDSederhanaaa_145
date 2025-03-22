@@ -15,3 +15,8 @@ namespace CRUDSederhana
     {
         // Ganti "SERVER" sesuai dengan SQL Server Anda
         private string connectionString = "Data Source=LAPTOP-3HJQCS6H\\AQIL;Initial Catalog=OrganisasiMahasiswa;Integrated Security=True";
+
+        public Form1()
+        {
+            InitializeComponent();
+        }

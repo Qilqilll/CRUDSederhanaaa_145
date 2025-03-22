@@ -35,3 +35,18 @@ namespace CRUDSederhana
             txtAlamat.Clear();
             txtNIM.Focus();  // Fokus kembali ke NIM agar user siap memasukkan data baru
         }
+        // Fungsi untuk menampilkan data di DataGridView
+        private void LoadData()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT NIM AS [NIM], Nama, Email, Telepon, Alamat FROM Mahasiswa";
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    dgvMahasiswa.AutoGenerateColumns = true;
+                    dgvMahasiswa.DataSource = dt;
